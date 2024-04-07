@@ -1,6 +1,8 @@
 # SwiftSort
 SwiftSort is a streamlined file management tool that simplifies clutter organization. Formerly the Clutter Manager, SwiftSort now includes a user-friendly GUI and enhanced application support for seamless file sorting. Experience efficient file management with SwiftSort.
 
+ ### SwiftSort old CLI based [version](https://github.com/vedantterse/CLUTTER-REMOVER) 
+
 ## Features
 - **Clutter Removal**: Automatically sorts files into folders based on their file types, keeping your directories organized.
 - **Folder Zipping**: Compresses the entire source folder and its contents into a zip file for easy storage and sharing.
