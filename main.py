@@ -8,15 +8,15 @@ import sys
 # Function to handle clutter removal
 def clutter_remover(source_folder):
     try:
-        # Check if source folder exists
+        
         if not os.path.exists(source_folder):
             raise FileNotFoundError("Source folder does not exist.")
 
-        # Check if source folder is empty
+         
         if not os.listdir(source_folder):
             raise ValueError("Source folder is empty.")
 
-        # Dictionary to store file extensions and their corresponding folder names
+        
         file_types = {
             'png': 'PNG',
             'jpg': 'JPG',
@@ -53,11 +53,11 @@ def clutter_remover(source_folder):
 # Function to handle folder zip
 def folder_zip(source_folder):
     try:
-        # Check if source folder exists
+         
         if not os.path.exists(source_folder):
             raise FileNotFoundError("Source folder does not exist.")
 
-        # Create a zip file containing the entire source folder and its contents
+        
         zip_file_path = os.path.join(os.path.dirname(source_folder), 'organized_files.zip')
         with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_DEFLATED) as zip_file:
             for root, dirs, files in os.walk(source_folder):
@@ -71,14 +71,14 @@ def folder_zip(source_folder):
 # Function to handle PNG renaming
 def rename_pngs(source_folder):
     try:
-        # Check if source folder exists
+         
         if not os.path.exists(source_folder):
             raise FileNotFoundError("Source folder does not exist.")
 
-        # Get list of PNG files in the source folder
+        
         png_files = [file for file in os.listdir(source_folder) if file.lower().endswith('.png')]
 
-        # Sort PNG files based on modification time
+        
         png_files.sort(key=lambda x: os.stat(os.path.join(source_folder, x)).st_mtime)
 
         # Rename PNG files sequentially
@@ -89,15 +89,14 @@ def rename_pngs(source_folder):
         return "PNG files renamed successfully!"
     except (FileNotFoundError, OSError) as e:
         return f"Error: {e}"
-
-# Main function
+ 
 def main():
     # Create the main Tkinter window
     root = tk.Tk()
     root.title("Clutter Manager Tool")
     root.geometry("300x350")  # Adjusted window size
 
-    # Add a gradient background
+     
     gradient_bg = "#64649f"
     root.configure(bg=gradient_bg)
 
@@ -119,7 +118,7 @@ def main():
             # Display the message in the GUI
             result_label.config(text=message)
 
-    # Create buttons with improved styling
+     
     button1 = tk.Button(frame, text="Clean Clutter", command=lambda: handle_click(1), bg="#FFD700", fg="black")
     button1.pack(pady=10)
     button2 = tk.Button(frame, text="Zip Folder", command=lambda: handle_click(2), bg="#FFD700", fg="black")
@@ -127,13 +126,13 @@ def main():
     button3 = tk.Button(frame, text="Rename PNGs", command=lambda: handle_click(3), bg="#FFD700", fg="black")
     button3.pack(pady=10)
 
-    # Label to display messages
+     
     result_label = tk.Label(frame, text="", bg="#64649f", font=("Arial", 14), wraplength=250, justify="left")
     result_label.pack(pady=20)
 
-    # Start the Tkinter event loop
+    
     root.mainloop()
 
-# Call the main function
+ 
 if __name__ == "__main__":
     main()
