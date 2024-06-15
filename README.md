@@ -1,7 +1,7 @@
 # SwiftSort
 SwiftSort is a streamlined file management tool that simplifies clutter organization. Formerly the Clutter Manager, SwiftSort now includes a user-friendly GUI and enhanced application support for seamless file sorting. Experience efficient file management with SwiftSort.
 
- ### SwiftSort old CLI based [version](https://github.com/vedantterse/CLUTTER-REMOVER) 
+ ### SwiftSort old CLI-based [version](https://github.com/vedantterse/CLUTTER-REMOVER) 
 
 ## Features
 - **Clutter Removal**: Automatically sorts files into folders based on their file types, keeping your directories organized.
@@ -33,6 +33,9 @@ docker run --rm -d -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix swiftsor
 2. Double-click the `run.bat` file to execute it. This will launch the Swift Sort application.
 
 3. In the application window, click on the desired functionality (e.g., Clean Clutter, Zip Folder, Rename PNGs) to organize your files accordingly.
+
+
+![image](https://github.com/vedantterse/SwiftSort/assets/69134828/935a7404-d466-4c4d-be37-ebbafae9c5f1)
 
 ### Sample Usage
 1. To clean clutter from a folder:
