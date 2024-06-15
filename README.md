@@ -19,7 +19,14 @@ To use Swift Sort, follow these steps:
 1. Clone the repository to your local machine:
 
 2. Navigate to the cloned directory:
-
+### Docker setup
+### run the following commands in ubuntu terminal for docker setup
+```bash
+docker build -t swiftsort .
+```
+```bash
+docker run --rm -d -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix swiftsort
+```
 ### Running the Application
 1. Locate the `run.bat` file in the root directory.
 
